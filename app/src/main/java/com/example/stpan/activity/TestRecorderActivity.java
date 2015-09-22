@@ -82,14 +82,12 @@ public class TestRecorderActivity extends BackActivity implements View.OnClickLi
                         mp3File = new File(FILE_PATH, System.currentTimeMillis()+".mp3");
                         System.out.println("path: "+mp3File.getAbsolutePath());
                         mRecorder = new MP3Recorder(mp3File);
-                        System.out.println("-----------------------------");
                         imageView.setImageResource(R.mipmap.record_up);
                         chronometer.setFormat("录制时间：(%s)");
                         chronometer.setBase(SystemClock.elapsedRealtime());
                         chronometer.start();
                         mRecorder.start();
                     }else {
-                        System.out.println("=============================");
                         isClicked =true;
                         imageView.setImageResource(R.mipmap.record_down);
                         chronometer.stop();

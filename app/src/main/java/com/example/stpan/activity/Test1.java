@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v4.util.ArrayMap;
+import android.widget.CalendarView;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -27,18 +28,10 @@ public class Test1 extends BackActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test);
+        init();
     }
 
     private void init(){
-        ArrayMap<String,Object> arrayMap = new ArrayMap<>();
-        arrayMap.put("name","stpan");
-        arrayMap.put("age","25");
-        arrayMap.put("gender","男");
-        HashMap hashMap = new HashMap();
-        Set set = hashMap.keySet();
-        Iterator iterator = set.iterator();
-        while (iterator.hasNext()){
-            iterator.next();
-        }
+
     }
 }

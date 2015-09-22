@@ -28,10 +28,10 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
-            <!--<intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
         </activity>
         <activity android:name=".ChoutiActivity"/>
         <activity android:name=".Test1"/>
@@ -44,12 +44,7 @@
         <activity android:name=".AnimatorPlusActivity"/>
         <activity android:name=".ValueAnimatorActivity"/>
         <activity android:name=".PopupWindowTestActivity"/>
-        <activity android:name=".TestRecorderActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".TestRecorderActivity"/>
     </application>
 
 </manifest>

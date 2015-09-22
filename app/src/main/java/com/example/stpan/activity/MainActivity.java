@@ -15,7 +15,7 @@ public class MainActivity extends BaseActivity {
     private ListView listView;
     private String[] strings = {"抽屉","test","notification","network",
             "sendMessage","animation","layoutAnimator","AnimatorPlus","valueAnimator"
-    ,"popupWindow"};
+    ,"popupWindow","record"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +52,8 @@ public class MainActivity extends BaseActivity {
                     case 8:intent = new Intent(MainActivity.this,ValueAnimatorActivity.class);
                         break;
                     case 9:intent = new Intent(MainActivity.this,PopupWindowTestActivity.class);
+                        break;
+                    case 10:intent = new Intent(MainActivity.this,TestRecorderActivity.class);
                         break;
                 }
                 if (intent!=null){
