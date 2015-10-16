@@ -9,10 +9,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- * ¹¦ÄÜ£º
- * ´´½¨Ê±¼ä:2015/9/22 14:41
- * ×÷Õß:pst
- * °æÈ¨: sowell,onegcloud
+ * åŠŸèƒ½ï¼š
+ * åˆ›å»ºæ—¶é—´:2015/9/22 14:41
+ * ä½œè€…:pst
+ * ç‰ˆæƒ: sowell,onegcloud
  */
 public class FileUtils {
     private static FileUtils fileUtils;
@@ -25,7 +25,7 @@ public class FileUtils {
     }
 
     /**
-     * ¼ì²éÊÇ·ñ´æÔÚSD¿¨
+     * æ£€æŸ¥æ˜¯å¦å­˜åœ¨SDå¡
      *
      * @return
      */
@@ -35,16 +35,16 @@ public class FileUtils {
     }
 
     /**
-     * ´´½¨Ä¿Â¼
+     * åˆ›å»ºç›®å½•
      *
-     * @param context ÎÄ¼ş¼ĞÃû³Æ
+     * @param context æ–‡ä»¶å¤¹åç§°
      * @return
      */
     public File createFileDir(Context context) {
         String filePath;
-        // ÈçSD¿¨ÒÑ´æÔÚ£¬Ôò´æ´¢£»·´Ö®´æÔÚdataÄ¿Â¼ÏÂ
+        // å¦‚SDå¡å·²å­˜åœ¨ï¼Œåˆ™å­˜å‚¨ï¼›åä¹‹å­˜åœ¨dataç›®å½•ä¸‹
         if (hasSdcard()) {
-            // SD¿¨Â·¾¶
+            // SDå¡è·¯å¾„
             filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/zhsq";
         } else {
             filePath = context.getCacheDir().getPath() + "/zhsq";
@@ -61,10 +61,10 @@ public class FileUtils {
     }
 
     /**
-     * É¾³ıÎÄ¼ş£¨ÈôÎªÄ¿Â¼£¬Ôòµİ¹éÉ¾³ı×ÓÄ¿Â¼ºÍÎÄ¼ş£©
+     * åˆ é™¤æ–‡ä»¶ï¼ˆè‹¥ä¸ºç›®å½•ï¼Œåˆ™é€’å½’åˆ é™¤å­ç›®å½•å’Œæ–‡ä»¶ï¼‰
      *
      * @param file
-     * @param delThisPath true´ú±íÉ¾³ı²ÎÊıÖ¸¶¨file£¬false´ú±í±£Áô²ÎÊıÖ¸¶¨file
+     * @param delThisPath trueä»£è¡¨åˆ é™¤å‚æ•°æŒ‡å®šfileï¼Œfalseä»£è¡¨ä¿ç•™å‚æ•°æŒ‡å®šfile
      */
     public void delFile(File file, boolean delThisPath) {
         if (!file.exists()) {
@@ -74,7 +74,7 @@ public class FileUtils {
             File[] subFiles = file.listFiles();
             if (subFiles != null) {
                 int num = subFiles.length;
-                // É¾³ı×ÓÄ¿Â¼ºÍÎÄ¼ş
+                // åˆ é™¤å­ç›®å½•å’Œæ–‡ä»¶
                 for (int i = 0; i < num; i++) {
                     delFile(subFiles[i], true);
                 }
@@ -86,7 +86,7 @@ public class FileUtils {
     }
 
     /**
-     * »ñÈ¡ÎÄ¼ş´óĞ¡£¬µ¥Î»Îªbyte£¨ÈôÎªÄ¿Â¼£¬Ôò°üÀ¨ËùÓĞ×ÓÄ¿Â¼ºÍÎÄ¼ş£©
+     * è·å–æ–‡ä»¶å¤§å°ï¼Œå•ä½ä¸ºbyteï¼ˆè‹¥ä¸ºç›®å½•ï¼Œåˆ™åŒ…æ‹¬æ‰€æœ‰å­ç›®å½•å’Œæ–‡ä»¶ï¼‰
      *
      * @param file
      * @return
@@ -110,10 +110,10 @@ public class FileUtils {
     }
 
     /**
-     * ±£´æBitmapµ½Ö¸¶¨Ä¿Â¼
+     * ä¿å­˜Bitmapåˆ°æŒ‡å®šç›®å½•
      *
-     * @param dir      Ä¿Â¼
-     * @param fileName ÎÄ¼şÃû
+     * @param dir      ç›®å½•
+     * @param fileName æ–‡ä»¶å
      * @param bitmap
      * @throws IOException
      */
@@ -134,10 +134,10 @@ public class FileUtils {
     }
 
     /**
-     * ÅĞ¶ÏÄ³Ä¿Â¼ÏÂÎÄ¼şÊÇ·ñ´æÔÚ
+     * åˆ¤æ–­æŸç›®å½•ä¸‹æ–‡ä»¶æ˜¯å¦å­˜åœ¨
      *
-     * @param dir      Ä¿Â¼
-     * @param fileName ÎÄ¼şÃû
+     * @param dir      ç›®å½•
+     * @param fileName æ–‡ä»¶å
      * @return
      */
     public boolean isFileExists(File dir, String fileName) {

@@ -8,7 +8,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.View;
 
 import com.example.stpan.fragment.HomeFragment;
-import com.nineoldandroids.view.ViewHelper;
 import com.example.stpan.activity.R;
 /**
  * Created by Administrator on 2015/4/28.
@@ -48,10 +47,7 @@ public class ChoutiActivity extends BaseActivity {
                 float scale = 1 - slideOffset;
                 View mContent = mDrawerLayout.getChildAt(0);
                 mContent.animate().translationX(drawerView.getMeasuredWidth() * (1 - scale)).setDuration(0);
-                //ViewHelper.setTranslationX(mContent, drawerView.getMeasuredWidth() * (1 - scale));
-                //ViewHelper.setPivotX(mContent, 0);
-                //ViewHelper.setPivotY(mContent, mContent.getMeasuredHeight() / 2);
-                mContent.invalidate();
+               // mContent.invalidate();
             }
         };
         mDrawerLayout.setScrimColor(Color.TRANSPARENT);

@@ -54,13 +54,13 @@ public class ValueAnimatorActivity extends BackActivity {
     public void btnClickT(View view){
         final Button button = (Button) view;
         ValueAnimator valueAnimator = new ValueAnimator();
-        valueAnimator.setFloatValues(1);
+        valueAnimator.setIntValues(1);
         valueAnimator.setDuration(10000);
         valueAnimator.setInterpolator(new LinearInterpolator());
         valueAnimator.setEvaluator(new TypeEvaluator() {
             @Override
             public Object evaluate(float fraction, Object startValue, Object endValue) {
-                return 10000*fraction;
+                return 100*fraction;
             }
         });
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {

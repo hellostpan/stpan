@@ -1,21 +1,19 @@
 package com.example.stpan.activity;
 
-import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import com.example.stpan.activity.R;
+
 import com.example.stpan.adapter.MainListViewAdapter;
 
 
 public class MainActivity extends BaseActivity {
     private ListView listView;
-    private String[] strings = {"抽屉","test","notification","network",
-            "sendMessage","animation","layoutAnimator","AnimatorPlus","valueAnimator"
-    ,"popupWindow","record"};
+    private String[] strings = {"抽屉","Test","Notification","Network",
+            "SendMessage","Animation","LayoutAnimator","AnimatorPlus","ValueAnimator"
+    ,"PopupWindow","Record","Fragment","FortAwesome"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +52,10 @@ public class MainActivity extends BaseActivity {
                     case 9:intent = new Intent(MainActivity.this,PopupWindowTestActivity.class);
                         break;
                     case 10:intent = new Intent(MainActivity.this,TestRecorderActivity.class);
+                        break;
+                    case 11:intent = new Intent(MainActivity.this,FragmentActivity.class);
+                        break;
+                    case 12:intent = new Intent(MainActivity.this,FortAwesomeActivity.class);
                         break;
                 }
                 if (intent!=null){

@@ -56,7 +56,6 @@
         android:id="@+id/ll_act_animator_main"
         android:layout_width="64dp"
         android:layout_height="64dp"
-
         android:background="@drawable/shape_bule"
         android:gravity="center">
 

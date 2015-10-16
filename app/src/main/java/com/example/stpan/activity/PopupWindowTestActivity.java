@@ -1,5 +1,6 @@
 package com.example.stpan.activity;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -32,13 +33,16 @@ public class PopupWindowTestActivity extends BackActivity {
     private void init() {
         View inflate = getLayoutInflater().inflate(R.layout.item_popup_window, null);
         linearLayout = (RelativeLayout) findViewById(R.id.ll_popup_window);
-        popupWindow = new PopupWindow(inflate,400,250);
+        popupWindow = new PopupWindow(inflate,400,150);
         popupWindow.setOutsideTouchable(true);
+        popupWindow.setAnimationStyle(android.R.style.Animation_Dialog);
+        popupWindow.setBackgroundDrawable(new ColorDrawable(0));
     }
 
     public void mClick(View view){
-        float x = view.getX();
-        float y = view.getY();
+        int [] location = new int[2];
+        view.getLocationOnScreen(location);
+        popupWindow.setFocusable(true);
         switch (view.getId()){
             case R.id.one:
                 if (popupWindow.isShowing())popupWindow.dismiss();
@@ -46,11 +50,15 @@ public class PopupWindowTestActivity extends BackActivity {
                 break;
             case R.id.two:
                 if (popupWindow.isShowing())popupWindow.dismiss();
-                popupWindow.showAsDropDown(view);
+                popupWindow.showAtLocation(linearLayout, Gravity.NO_GRAVITY, location[0] + view.getWidth(), location[1]);
                 break;
             case R.id.three:
                 if (popupWindow.isShowing())popupWindow.dismiss();
-                popupWindow.showAtLocation(linearLayout, Gravity.CENTER,0,0);
+                popupWindow.showAtLocation(linearLayout, Gravity.NO_GRAVITY, location[0]-(popupWindow.getWidth()-view.getWidth())/2, location[1]-popupWindow.getHeight());
+                break;
+            case R.id.four:
+                if (popupWindow.isShowing())popupWindow.dismiss();
+                popupWindow.showAtLocation(linearLayout, Gravity.NO_GRAVITY,location[0]-popupWindow.getWidth(),location[1]);
                 break;
         }
     }

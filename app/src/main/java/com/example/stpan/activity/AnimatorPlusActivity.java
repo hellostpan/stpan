@@ -71,7 +71,7 @@ public class AnimatorPlusActivity extends BackActivity implements View.OnClickLi
 
     public void click(View view){
         if (!isOpen){
-            RotateAnimation rotateAnimation = new RotateAnimation(0,135,Animation.RELATIVE_TO_SELF,0.5f,RotateAnimation.RELATIVE_TO_SELF,0.5f);
+            RotateAnimation rotateAnimation = new RotateAnimation(0,135,RotateAnimation.RELATIVE_TO_SELF,0.5f,RotateAnimation.RELATIVE_TO_SELF,0.5f);
             rotateAnimation.setDuration(300);
             rotateAnimation.setFillAfter(true);
             rotateAnimation.setFillEnabled(true);
